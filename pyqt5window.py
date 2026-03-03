@@ -33,11 +33,6 @@ class ResearchModel(QWidget):
         vbox.addWidget(self.tools_used_label)
 
         self.setLayout(vbox)
-        self.entry_label.setWordWrap(True)
-        self.topic_label.setWordWrap(True)
-        self.summary_label.setWordWrap(True)
-        self.sources_label.setWordWrap(True)
-        self.tools_used_label.setWordWrap(True)
         self.show()
 
         self.entry_label.setAlignment(Qt.AlignCenter)
@@ -112,4 +107,5 @@ class ResearchModel(QWidget):
         self.entry_label.setText(f"AI ERROR: {err_msg}")
         self.enter_button.setEnabled(True)
    
+
     
