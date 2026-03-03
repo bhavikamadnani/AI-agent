@@ -22,9 +22,10 @@ class ResearchResponse(BaseModel) :
         summary: str
         sources: list[str]
         tools_used: list[str]
+        
 def setup_agent():
     llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")                     
-    parser =PydanticOutputParser(pydantic_object= ResearchResponse)
+    parser = PydanticOutputParser(pydantic_object= ResearchResponse)
 
     prompt = ChatPromptTemplate.from_messages(
     [
@@ -68,7 +69,7 @@ if __name__ == "__main__":
     print("Step 5: Entering Main Loop...")
     sys.exit(app.exec_())
  
-#  What is the capital of France?
+
 
 
         
