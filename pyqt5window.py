@@ -1,8 +1,10 @@
+# PyQt5  imports 
 from PyQt5.QtWidgets import QWidget     
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import * 
 from worker import AIWorker
 
+# GUI
 class ResearchModel(QWidget):
     def __init__(self, executor, parser):
         super().__init__()
@@ -85,7 +87,7 @@ class ResearchModel(QWidget):
         
         self.enter_button.clicked.connect(self.start_research)
     
- 
+# Data display and error handling functions
     def start_research(self) :
         input = self.query_input.text()
         if not input:
@@ -94,7 +96,7 @@ class ResearchModel(QWidget):
         self.enter_button.setEnabled(False) 
         self.entry_label.setText("Researching... please wait.")
 
-        self.worker = AIWorker(self.executor, self.parser, prompt= input)
+        self.worker = AIWorker(self.executor, self.parser, input)
         self.worker.finished.connect(self.handle_success)
         self.worker.error.connect(self.handle_error)
         self.worker.start()
