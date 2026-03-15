@@ -1,5 +1,3 @@
-# I refactored your entire ui file lol 
-# things look better now so thank me later
 # PyQt5 imports
 from PyQt5.QtWidgets import (
     QWidget,
