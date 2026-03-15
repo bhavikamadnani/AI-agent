@@ -17,7 +17,7 @@ class AIWorker(QThread):
             raw_response = agent_executor.invoke({"input": self.input})
             content = raw_response.get("output")
 
-            # THE REAL FIX: Normalize various possible output shapes into a single string
+            # various possible output shapes into a single string
             if isinstance(content, str):
                 content_str = content
             elif isinstance(content, list):
