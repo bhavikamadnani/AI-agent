@@ -1,0 +1,17 @@
+# Core dependencies for AI-agent-main project
+python-dotenv
+pydantic
+PyQt5
+
+# LangChain components
+langchain-core
+langchain-classic
+langchain-community
+langchain-google-genai
+
+# Google Gemini AI client
+google-genai
+
+# (Optional) you may need DuckDuckGo support if not bundled with langchain-community
+duckduckgo-search
+ddgs
